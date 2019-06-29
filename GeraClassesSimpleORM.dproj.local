@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2019/06/26 17:34:30.000.743,=C:\Users\Alan\OneDrive\Meus Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2019/06/27 17:46:17.000.049,=C:\Users\Alan\OneDrive\Meus Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2019/06/27 17:51:47.000.663,D:\Delphi\Projetos\GeraClassesSimpleORM\uGeraClassesSimpleORM.dfm=C:\Users\Alan\OneDrive\Meus Documentos\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2019/06/27 17:51:47.000.663,D:\Delphi\Projetos\GeraClassesSimpleORM\uGeraClassesSimpleORM.pas=C:\Users\Alan\OneDrive\Meus Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2019/06/27 17:51:51.000.300,D:\Delphi\Projetos\GeraClassesSimpleORM\GeraClassesSimpleORM.dproj=C:\Users\Alan\OneDrive\Meus Documentos\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2019/06/27 18:01:48.000.842,=D:\Delphi\Projetos\GeraClassesSimpleORM\uFuncoes.pas</Transaction>
+    <Transaction>2019/06/27 18:03:13.000.981,D:\Delphi\Projetos\GeraClassesSimpleORM\uFuncoes.pas=</Transaction>
+  </Transactions>
+</BorlandProject>
