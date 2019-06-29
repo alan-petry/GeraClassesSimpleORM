@@ -155,7 +155,7 @@ begin
       script.Lines.Add('interface');
       script.Lines.Add('');
       script.Lines.Add('uses');
-      script.Lines.Add('  System.Generics.Collections, System.Classes, Rest.Json, SimpleAttributes;');
+      script.Lines.Add('  System.Generics.Collections, System.Classes, Rest.Json, System.JSON, SimpleAttributes;');
       script.Lines.Add('');
       script.Lines.Add('type');
       script.Lines.Add('  [Tabela('+QuotedStr(maiusculas_sem_acento_e_cedilha(tabela))+')]');
@@ -223,13 +223,16 @@ begin
         else
           campo := 'string';
 
-        script.Lines.Add('    [Campo('+quotedstr(maiusculas_sem_acento_e_cedilha(FQuery.Fields[i].FieldName))+')]');
+        if I = 0 then
+          script.Lines.Add('    [Campo('+quotedstr(maiusculas_sem_acento_e_cedilha(FQuery.Fields[i].FieldName))+'), PK, AutoInc]')
+        else
+          script.Lines.Add('    [Campo('+quotedstr(maiusculas_sem_acento_e_cedilha(FQuery.Fields[i].FieldName))+')]');
         script.Lines.Add('    property '+maiusculas_sem_acento_e_cedilha(FQuery.Fields[i].FieldName)
                                    +': '+campo+' read F'+maiusculas_sem_acento_e_cedilha(FQuery.Fields[i].FieldName)
                                    +' write F'+maiusculas_sem_acento_e_cedilha(FQuery.Fields[i].FieldName)+';');
       end;
       script.Lines.Add('');
-      script.Lines.Add('');
+      script.Lines.Add('    function ToJSONObject: TJsonObject;');
       script.Lines.Add('    function ToJsonString: string;');
       script.Lines.Add('    class function FromJsonString(AJsonString: string): T'+maiusculas_sem_acento_e_cedilha(tabela)+';');
       script.Lines.Add('');
@@ -246,6 +249,11 @@ begin
       script.Lines.Add('begin');
       script.Lines.Add('');
       script.Lines.Add('  inherited;');
+      script.Lines.Add('end;');
+      script.Lines.Add('');
+      script.Lines.Add('function T'+maiusculas_sem_acento_e_cedilha(tabela)+'.ToJSONObject: TJsonObject;');
+      script.Lines.Add('begin');
+      script.Lines.Add('  Result := TJson.ObjectToJsonObject(Self);');
       script.Lines.Add('end;');
       script.Lines.Add('');
       script.Lines.Add('function T'+maiusculas_sem_acento_e_cedilha(tabela)+'.ToJsonString: string;');
