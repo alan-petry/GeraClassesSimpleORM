@@ -1,0 +1,4 @@
+*.local
+IDEExpert/Source/__history/
+*.dcu
+*.identcache
