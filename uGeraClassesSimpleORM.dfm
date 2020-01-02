@@ -50,34 +50,34 @@ object frmGeradorClassesSimpleORM: TfrmGeradorClassesSimpleORM
       BevelOuter = bvNone
       TabOrder = 1
       object btnGerarClasses: TButton
-        Left = 568
-        Top = 16
-        Width = 153
+        Left = 488
+        Top = 104
+        Width = 121
         Height = 25
         Caption = 'Gerar Classes'
         TabOrder = 0
         OnClick = btnGerarClassesClick
       end
       object edtCaminhoArquivos: TLabeledEdit
-        Left = 568
-        Top = 62
-        Width = 243
+        Left = 488
+        Top = 30
+        Width = 345
         Height = 21
         EditLabel.Width = 106
         EditLabel.Height = 13
         EditLabel.Caption = 'Caminho dos Arquivos'
         TabOrder = 1
       end
-      object edtPrefixo: TLabeledEdit
-        Left = 568
-        Top = 105
+      object edtPrefixoEntidades: TLabeledEdit
+        Left = 488
+        Top = 77
         Width = 121
         Height = 21
-        EditLabel.Width = 102
+        EditLabel.Width = 84
         EditLabel.Height = 13
-        EditLabel.Caption = 'Prefixo nome arquivo'
+        EditLabel.Caption = 'Prefixo Entidades'
         TabOrder = 2
-        Text = 'Gerador.Model'
+        Text = 'Gerador.Entidades'
       end
       object edtCaminhoBanco: TLabeledEdit
         Left = 24
@@ -122,6 +122,36 @@ object frmGeradorClassesSimpleORM: TfrmGeradorClassesSimpleORM
         Caption = 'Conectar'
         TabOrder = 6
         OnClick = btnConectarClick
+      end
+      object Button3: TButton
+        Left = 342
+        Top = 57
+        Width = 75
+        Height = 25
+        Caption = 'TESTES'
+        TabOrder = 7
+        Visible = False
+        OnClick = Button3Click
+      end
+      object btnModelController: TButton
+        Left = 695
+        Top = 104
+        Width = 138
+        Height = 25
+        Caption = 'Gerar Model e Controller'
+        TabOrder = 8
+        OnClick = btnModelControllerClick
+      end
+      object edtPrefixoModel: TLabeledEdit
+        Left = 695
+        Top = 77
+        Width = 138
+        Height = 21
+        EditLabel.Width = 124
+        EditLabel.Height = 13
+        EditLabel.Caption = 'Prefixo Model e Controller'
+        TabOrder = 9
+        Text = 'Gerador'
       end
     end
     object Panel4: TPanel
