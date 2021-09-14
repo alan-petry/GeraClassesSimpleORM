@@ -115,7 +115,7 @@ var tabela, campo : string;
     i, j : Integer;
 begin
   try
-  caminho_banco := 'D:\SisCAV\Fontes\Fontes_DataSnap\SisCAV_Server\Win32\Debug\BANCO.GDB';
+  caminho_banco := Trim(edtCaminhoBanco.Text);
   if not FileExists(caminho_banco) then
   begin
     ShowMessage('Base de dados não encontrada');

@@ -88,9 +88,6 @@ object frmGeradorClassesSimpleORM: TfrmGeradorClassesSimpleORM
         EditLabel.Height = 13
         EditLabel.Caption = 'Caminho do Banco de Dados'
         TabOrder = 3
-        Text = 
-          'D:\SisCAV\Fontes\Fontes_DataSnap\SisCAV_Server\Win32\Debug\banco' +
-          '.gdb'
       end
       object edtUsuario: TLabeledEdit
         Left = 24
